@@ -1,0 +1,136 @@
+* { 
+    margin: 0; 
+    padding: 0;
+}
+img {
+    border: none;
+}
+.clear {
+    zoom: 1;
+}
+.clear:after {
+    content: ".";
+    display: block;
+    clear: both;
+}
+#message {
+    width: 662px;
+    margin: 10px auto 0;
+    font: 12px arial;
+}
+#message a{
+    text-decoration: none;
+    color: #333;
+}
+#message a:hover {
+    text-decoration: underline;
+}
+#message li {
+    list-style: none;
+}
+.user {
+    width: 160px;
+    border: 1px solid #cdcdcd;
+    background-color: #e5edf2;
+}
+#message .user h2 {
+    height: 38px;
+    padding-left: 15px;
+    border-bottom: 1px dotted #cdcdcd;
+    font-size: 14px;
+    line-height: 38px;
+}
+#message .user_wrap {
+    position: relative;
+    width: 160px;
+    padding-bottom: 10px;
+}
+.user_info {
+    display: none;
+    position: absolute;
+    width: 450px;
+    border: 1px solid #cdcdcd;
+    background: #fff;
+}
+.user_pic {
+    float: left;
+    width: 160px;
+    margin-bottom: 10px;
+}
+.user_pic .photo {
+    margin: 10px auto;
+    text-align: center;
+}
+.user_pic ul {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.user_pic a {
+    margin-left: 18px;
+}
+.user_pic .email {
+    margin-bottom: 4px;
+    background: url(images/pmto.gif) no-repeat;
+}
+.user_pic .friend {
+    background: url(images/addbuddy.gif) no-repeat;
+}
+.user_list {
+    
+    float: left;
+}
+.user_list dl {
+    width: 290px;
+}
+.user_list dt {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#message .user_list dt a {
+    margin-right: 3px;
+    font-weight: bold;
+    color: #000;
+}
+.user_list dd {
+    float: left;
+    width: 145px;
+    line-height: 20px;
+}
+.user_list dd span {
+    float: left;
+    width: 72px;
+}
+#message .ico {
+    width: 290px;
+}
+#message .ico li {
+    float: left;
+    margin-right: 5px;
+}
+#message .picture {
+    width: 120px;
+    margin: 10px auto 0;
+    text-align: center;
+    line-height: 0;
+}
+#message h3 {
+    width: 120px;
+    margin: 10px auto 0;
+    line-height: 30px;
+}
+#message .grade {
+    width: 120px;
+    margin: 5px auto 7px;
+}
+#message .user_data {
+    width: 120px;
+    margin: 0 auto;
+}
+.user_data li {
+    line-height: 20px;
+}
+.user_data h4 {
+    width: 60px;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
