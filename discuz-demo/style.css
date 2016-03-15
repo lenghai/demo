@@ -48,6 +48,7 @@ img {
 .user_info {
     display: none;
     position: absolute;
+    top: -15px;
     width: 450px;
     border: 1px solid #cdcdcd;
     background: #fff;
