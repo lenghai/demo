@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calender</title>
+	<style type="text/css">
+	    * {
+	    	padding: 0;
+	    	margin: 0;
+	    }
+        #wrap {
+        	width: 300px;
+        	margin: 20px auto 0;
+        	padding: 20px 0 10px 10px;
+        	background-color: #eae5e3; 
+        }
+        li {
+        	display: inline-block;
+        	width: 80px;
+        	height: 80px;
+        	margin-left: 10px;
+        	margin-bottom: 10px;
+        	text-align: center;
+        	color: #fff;
+        	background: #302833;
+        }
+        li h2 {
+        	margin-top: 20px;
+        }
+        .text {
+        	width: 240px;
+        	margin-left: 15px;
+        	padding: 10px;
+        	font-size: 14px;
+        	background: #f3f3f2;
+        }
+        .active {
+        	color: #e9546b;
+        	background: #fff;
+        	border: 1px solid #302833;
+        }
+	</style>
+	<script type="text/javascript">
+        window.onload = function () {
+            var arr = [
+                "<h1>1月</h1><p>1月是一年的第一月。1月是阳历年中的第一个月，是大月，共有31天。在北半球，1月是冬季的第三个月。本月的节气:小寒、大寒 英文中的1月(January)来源于古罗马的守护神双面神杰纳斯(Janus)。</p>",
+                "<h1>2月</h1>2月是阳历年中的第二个月，平年有28天，闰年有29天。在历史上，曾经有3次，2月出现30天。在北半球，2月是冬季的第四个月，也是春季的第一个月。本月节气有:立春、雨水。英文中的2月(February)来源于古罗马的Februus(斋戒月)，也可能是源自于萨拜恩。</p>",
+                "<h1>3月</h1><p>3月是阳历年中的第三个月，是大月，共有31天. 在北半球，3月是春季的第二个月，本月节气有:惊蛰、春分。 英文中的3月(March)来源于古罗马战神玛尔斯。</p>",
+                '<h1>4月</h1><p>4月是阳历年中的第四个月，是全年第一个小月，共有30天。在北半球，4月是春季的第三个月，本月的节气:清明、谷雨。英文中的4月(April)来源于单词aperire，表示"开"，可能意味着植物在春天开始生长。每年4月，塞维利亚都要迎来标志西班牙夏天开始的传统节日"四月节"。另外四月也是一些小说里的人物角色。而农历四月则是柑橘等作物扬华之时。</p>',
+                '<h1>5月</h1><p>5月是公历年中的第五个月，是大月，共有31天。在北半球，5月是夏季的第一个月，这个月有两个节气:立夏、小满。英文5月名称(May)可能源自罗马神话丰收繁殖女神迈亚，或来源于在5月庆祝节日的Bona Dea女神，或来自拉丁语词maiores(意为"较年长者")。</p>',
+                '<h1>6月</h1><p>6月，英文:June ;六月一种传说来源于Junius这个拉丁字族姓;另一种说法是根据女神Juno的名字命名的，Juno是女神之王，司生育。6月是公历年中的第六个月，是小月，共有30天;阴历的六月是大月，共有30天。在北半球，6月是夏季的第二个月，本月的节气:芒种、夏至。天气一般偏热，是上半年当中的最后一个月。其中公历6月初一代表着一年的半已经过去了。</p>',
+                '<h1>7月</h1><p>7月是一年中的第七个月份，此外，还有名叫7月的韩国音乐人、动漫人物7月、电影《七月》等等。</p>',
+                '<h1>8月</h1><p>8月，12个月之一，处于夏季，农历和公历因其历法不同，八月的时间也不同。</p>',
+                '<h1>9月</h1><p>农历九月的别称有菊月、授衣月、青女月、小田月、霜月、长月、暮秋、晚秋、残秋、素秋等。</p>',
+                '<h1>10月</h1><p>10月是一年中12个月份之一。</p>',
+                '<h1>11月</h1><p>十一月 Nov. November天蝎座10月23日～11月21日神秘诡谲，令人费疑猜的星座。他们可以很执著，也可以很破坏；在爱情的国度里黑白分明，没有灰色地带，他们对於自己的目标相当清楚，一旦确立就往前冲。</p>',
+                '<h1>12月</h1><p>12月是阳历年中的第十二个月，是大月，共有31天。农历的十二月不是固定的30天，依靠月亮圆亏来推断。</p>'
+            ];
+            var aLi = document.getElementsByTagName("li");
+            var aTxt = document.getElementById("wrap").getElementsByTagName("div")[0];
+            for(var i=0;i<aLi.length;i++) {
+            	aLi[i].index = i;
+            	aLi[i].onmouseover = function () {
+            		for(var j=0;j<aLi.length;j++) {
+            			aLi[j].className = "";
+            		}
+            		this.className = "active";
+                aTxt.innerHTML = arr[this.index];
+            	};
+            }
+        }
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<ul>
+			<li class="active"><h2>1</h2><p>JAN</p></li>
+			<li><h2>2</h2><p>FER</p></li>
+			<li><h2>3</h2><p>MAR</p></li>
+			<li><h2>4</h2><p>APR</p></li>
+			<li><h2>5</h2><p>MAY</p></li>
+			<li><h2>6</h2><p>JUN</p></li>
+			<li><h2>7</h2><p>JUL</p></li>
+			<li><h2>8</h2><p>AUG</p></li>
+			<li><h2>9</h2><p>SEP</p></li>
+			<li><h2>10</h2><p>OCT</p></li>
+			<li><h2>11</h2><p>NOV</p></li>
+			<li><h2>12</h2><p>DEC</p></li>
+		</ul>
+		<div class="text">
+			<h1>1月</h1>
+			<p>1月是一年的第一月。1月是阳历年中的第一个月，是大月，共有31天。在北半球，1月是冬季的第三个月。本月的节气:小寒、大寒 英文中的1月(January)来源于古罗马的守护神双面神杰纳斯(Janus)。</p>
+		</div>
+	</div>
+</body>
+</html>

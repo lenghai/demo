@@ -21,8 +21,8 @@ function showUserList() {
 	}
     for(var i=0;i<oInfo.length;i++) {
     	oInfo[i].onmouseout = function() {
-    		var that = this;
-    		that.style.display = "none";
+    		this.style.display = "none";
+    	
     	}
     }
 }
