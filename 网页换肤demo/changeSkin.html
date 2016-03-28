@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页换肤</title>
+	<link rel="stylesheet" type="text/css" href="css1.css">
+	<script type="text/javascript">
+        window.onload = function() {
+           var oBtn = document.getElementsByTagName("button");
+           var oLink = document.getElementsByTagName("link")[0];
+           var i = 0;
+           var num;
+           for(i;i<oBtn.length;i++) {
+           	oBtn[i].index = i;
+           	oBtn[i].onclick = function() {
+           		num = this.index+1;
+                oLink.href = "css"+num+".css";    
+           	};
+           }
+        };
+	</script>
+</head>
+<body>
+  <div id="wrap">
+    <button>皮肤1</button>
+    <button>皮肤2</button>
+	<form>
+	  <div>
+		<label for="name">输入姓名：</label>
+		<input type="text" id="name" name="name" />
+	  </div>
+	  <div>
+		<label for="password">输入密码：</label>
+		<input type="text" id="password" name="password" />
+	  </div>
+	  <div>
+		<label for="message">请您留言：</label>
+		<textarea id="message" name="message"></textarea>
+	  </div>
+		<input type="submit" value="提交" />
+	</form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: url(2.jpg) no-repeat top center;
+}
+#wrap {
+	width: 600px;
+	margin: 50px auto 0;
+	padding: 20px;
+	border: 2px solid #475950;
+}
+#wrap div {
+	margin-bottom: 30px;
+}
+form {
+	margin-top: 20px;
+}
+input[type="text"] {
+	width: 400px;
+	height: 2em;
+}
+input[type="submit"] {
+	display: block;
+	width: 100px;
+	height: 40px;
+	margin: 0 auto;
+}
+#wrap textarea {
+	width: 400px;
+	height: 10em;
+}
+label {
+	cursor: pointer;
+	color: #180614;
+}
