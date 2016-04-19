@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    font-size: 12px;
+}
+td,
+th {
+    text-align: center;
+}
+td {
+    padding: 5px;
+}
+#cart {
+    margin: 50px auto 0;
+}
+#cart thead tr {
+    border: 1px solid #dddcd6;
+}
+#cart thead th {
+    height: 38px;
+    padding: 0 10px;
+    border-right: 1px solid #dddcd6;
+    font-size: 14px;
+    background: #f3f3f2;
+    color: #165e83;
+}
+#cart .btn {
+    display: block;
+    width: 43px;
+    height: 19px;
+    padding-left: 3px;
+    line-height: 19px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+    background: url(images/ico1.gif) no-repeat;
+}
+#cart .btn:hover {
+    background: url(images/ico1.gif) no-repeat 0 -19px;
+}
+#cart .btn_active {
+    display: block;
+    width: 43px;
+    height: 19px;
+    padding-left: 3px;
+    line-height: 19px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+    background: url(images/ico1.gif) no-repeat 0 bottom;
+}
+#cart .btn_down {
+    display: block;
+    width: 43px;
+    height: 19px;
+    padding-left: 3px;
+    line-height: 19px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000;
+    background: url(images/down.gif) no-repeat; 
+}
+#cart tbody tr {
+    border-left: 1px solid #dddcd6;
+    border-bottom: 1px solid #dddcd6;
+}
+#cart tbody td {
+    border-right: 1px solid #dddcd6;
+}
+#cart tbody a {
+    float: left;
+    width: 220px;
+    padding: 25px 5px 0 5px;
+    text-align: left;
+    text-decoration: none;
+    color: #0095d9;
+}
+#cart tbody a:hover {
+    text-decoration: underline;
+    color: #b8d200;
+}
+#cart img {
+    float: left;
+    padding: 2px;
+}
+#cart span {
+    font-weight: bold;
+    font-size: 16px;
+    font-family: arial;
+    color: #ff9900;
+}
+#cart tfoot th {
+    padding: 10px 0;
+    font-size: 14px;
+    background: #f6f6f6;
+    color: #1e50a2;
+}

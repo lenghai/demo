@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>baidu</title>
+	<style type="text/css">
+	    * {
+	    	padding: 0;
+	    	margin: 0;
+	    }
+	    ul {
+	    	margin-top: 3px;
+	    	border: 1px solid #ccc;
+	    }
+	    li {
+	    	height: 30px;
+	    	line-height: 30px;
+	    	text-align: center;
+	    	list-style-type: none;
+	    	cursor: pointer;
+	    }
+	    li:hover {
+	    	background-color: #f8e58c;
+	    }
+        #wrap {
+        	width: 60px;
+        	margin: 20px auto 0;
+        	font-size: 14px;
+        	color: blue;
+        }
+        #wrap p {
+        	background: url(ico.gif) no-repeat right;
+        }
+	</style>
+	<script type="text/javascript">
+       window.onload = function() {
+       	   var oClick = document.getElementById("wrap").getElementsByTagName("p")[0];
+       	   var oUl = document.getElementById("wrap").getElementsByTagName("ul")[0];
+           oClick.onclick = function() {
+               if (oUl.style.display=="none") {
+                   oUl.style.display = "block";
+               }
+               else {
+               	oUl.style.display = "none";
+               }
+           };
+       };
+
+	</script>
+
+</head>
+<body>
+	<div id="wrap">
+		<p>输入法</p>
+		<ul>
+			<li>手写</li>
+			<li>拼音</li>
+			<li>关闭</li>
+		</ul>
+	</div>
+</body>
+</html>
