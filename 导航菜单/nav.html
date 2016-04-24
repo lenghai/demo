@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nav</title>
+    <style type="text/css">
+        nav {
+            margin-top: 100px;
+            margin-left: 200px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #nav1 {
+            width: 145px;
+            border: 1px solid #8e9eb1;
+            background-color: #8e9eb1;
+        }
+        #nav1>li a {
+            display: block;
+            padding-left: 25px;
+            font-size: 13px;
+            line-height: 24px;
+            border-top: 1px solid #a2b4c9;
+            border-bottom: 1px solid #708195;  
+            text-decoration: none;
+            color: #fff;
+            background: url(nav.gif) no-repeat 5% 50%;
+        }
+        #nav1>li:hover {
+            background: url(navLink.gif) repeat-x;
+        }
+        .nav2 {
+            display: none;
+        }
+        .nav2 li {
+            background: url(menu.gif) repeat-x;
+        }
+        .nav2 li a {
+            width: 145px;
+            padding-left: 43px;
+            line-height: 24px;
+            font-size: 12px;
+            text-decoration: none;
+            color: #6b7f97;
+            background: url(nav2.gif) no-repeat 23px 2px;
+        }
+        .nav2 li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+       <ul id="nav1">
+           <li class="link"><a href="javascript:void(0)">服装鞋靴</a></li>
+           <ul class="nav2">
+                <li><a href="#">女装</a></li>
+                <li><a href="#">男装</a></li>
+                <li><a href="#">女鞋</a></li>
+                <li><a href="#">男鞋</a></li>
+           </ul>
+           <li class="link"><a href="javascript:void(0)">箱包配件</a></li>
+           <ul class="nav2">
+               <li><a href="#">女包</a></li>
+               <li><a href="#">男包</a></li>
+               <li><a href="#">帽子</a></li>
+               <li><a href="#">戒指</a></li>
+           </ul>
+           <li class="link"><a href="javascript:void(0)">家电手机</a></li>
+           <ul class="nav2">
+               <li><a href="#">电视</a></li>
+               <li><a href="#">冰箱</a></li>
+               <li><a href="#">空调</a></li>
+               <li><a href="#">手机</a></li>
+           </ul>
+           <li class="link"><a href="javascript:void(0)">眼镜手表</a></li>
+           <ul class="nav2">
+               <li><a href="#">太阳镜</a></li>
+               <li><a href="#">护目镜</a></li>
+               <li><a href="#">电子表</a></li>
+               <li><a href="#">机械表</a></li>
+           </ul>
+           <li class="link"><a href="javascript:void(0)">美妆护理</a></li>
+           <ul class="nav2">
+                <li><a href="#">面膜</a></li>
+                <li><a href="#">洗发水</a></li>
+                <li><a href="#">牙膏</a></li>
+                <li><a href="#">漱口水</a></li>
+           </ul>
+           <li class="link"><a href="javascipt:void(0)">运动户外</a></li>
+           <ul class="nav2">
+                <li><a href="#">冲锋衣</a></li>
+                <li><a href="#">户外鞋</a></li>
+                <li><a href="#">望远镜</a></li>
+                <li><a href="#">山地车</a></li>
+           </ul>
+       </ul>
+   </nav>
+   <script type="text/javascript">
+       window.onload = function () {
+           var nav = document.getElementById("nav1");
+           var oLi = nav.getElementsByClassName("link");
+           var oUl = nav.getElementsByClassName("nav2"); 
+           for(var i=0;i<oLi.length;i++) {
+            oLi[i].index = i;
+            oLi[i].onclick = function () {
+                if(oUl[this.index].style.display === "block") {
+                    oUl[this.index].style.display = "none";
+                }
+                else {
+                    for(var i=0;i<oUl.length;i++) {
+                        oUl[i].style.display = "none";
+                    }
+                    oUl[this.index].style.display = "block";
+                }
+            }
+           }
+       }
+   </script> 
+</body>
+</html>
